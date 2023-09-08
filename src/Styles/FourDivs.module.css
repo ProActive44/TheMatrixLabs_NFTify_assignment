@@ -1,24 +1,49 @@
-.bigContainer{
-    display: flex;
-    /* width: 100%; */
-    gap: 20px;
-    margin: 20px 0;
-    justify-content: center;
-    /* border: 1px solid red; */
-    /* height: 90vh; */
-    /* overflow: scroll; */
+.bigContainer {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size:small;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+  /* border: 1px solid red; */
+  /* height: 90vh; */
+  /* overflow: scroll; */
 }
 
 .smallContainer {
-    padding: 10px;
   /* min-width: 200px; */
   /* max-width: 400px; */
   width: 220px;
+  height: 200px;
   border-radius: 10px;
   background-color: #390554;
+  padding: 10px 30px 20px 10px;
+  position: relative; 
 }
 
-.flex div{
-    display: flex;
-    justify-content: space-between;
+.flex div {
+  display: flex;
+  padding: 0;
+  margin: -15px 0;
+  gap: 10px;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.circle {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #960252;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
