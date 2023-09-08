@@ -1,4 +1,3 @@
-import React from 'react';
 import '../Styles/LeftPanel.css'
 import Vector from '../Images/Vector.png'
 import logo from '../Images/NFTify.png'
@@ -7,8 +6,19 @@ import Pair from '../Images/fluent_pair.png'
 import facebook from '../Images/facebook.png'
 import linkedin from '../Images/linkedin.png'
 import twitter from '../Images/twitter.png'
+import { useDispatch, useSelector } from 'react-redux';
 
 const LeftPanel = () => {
+
+    const dispatch = useDispatch();
+    const active = useSelector((store)=>store.active)
+
+    console.log(active)
+
+    const changeActive = ()=>{
+        active ? dispatch({type:'TRUE'}) : dispatch({type:'FALSE'})
+    }
+
     return (
         <div className='container'>
             <div>
@@ -16,12 +26,12 @@ const LeftPanel = () => {
                     <img src={Vector} alt='vector'/>
                     <img src={logo} alt='NFTify'/>
                 </div>
-                <div className='optains'>
-                    <div className='optain'>
+                <div className='options'>
+                    <div className={active? 'ActiveOption' : 'option'} onClick={changeActive}>
                         <img src={Token} alt="token" />
                         <h3>Token Address</h3>
                     </div>
-                    <div className='optain'>
+                    <div className={active? 'option' : 'ActiveOption'} onClick={changeActive}>
                         <img src={Pair} alt='fluent_pair'/>
                         <h3>Pair Address</h3>
                     </div>
