@@ -31,6 +31,12 @@ const reducer = (state = initState, action) => {
         data: payload,
       };
 
+    case "SEARCH":
+      return {
+        ...state,
+        data: payload,
+      };
+
     default:
       return state;
   }

@@ -15,3 +15,9 @@ export const getTokenData = (dispatch) => {
     .then((res) => dispatch({ type: "TOKEN", payload: res.data.pairs }))
     .catch((error) => console.log(error));
 };
+
+export const searchData = (q) => (dispatch) => {
+  axios(`https://api.dexscreener.com/latest/dex/search?q=${q}`)
+    .then((res) => dispatch({ type: "SEARCH", payload: res.data.pairs }))
+    .catch((error) => console.log(error));
+};

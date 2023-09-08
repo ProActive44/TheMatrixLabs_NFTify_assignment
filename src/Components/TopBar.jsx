@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from 'react-redux'
 import Styles from "../Styles/TopBar.module.css";
-import Search from '../Images/Search.png'
+import Search from "../Images/Search.png";
+import { searchData } from "../Redux/action";
 
 const TopBar = () => {
+  const [search, setSearch] = useState();
+  const dispatch = useDispatch()
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSearch = ()=>{
+     dispatch(searchData(search))
+  }
+
   return (
     <div className={Styles.container}>
       <div>
@@ -16,8 +29,12 @@ const TopBar = () => {
         //     border: "0.50px white solid",
         //   }}
         >
-          <input className={Styles.input} placeholder="Search"/>
-          <img src={Search} alt="search"/>
+          <input
+            className={Styles.input}
+            placeholder="Search"
+            onChange={(e) => handleChange(e)}
+          />
+          <img src={Search} alt="search" onClick={handleSearch}/>
         </div>
       </div>
       <div>

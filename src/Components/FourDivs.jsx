@@ -28,7 +28,7 @@ const FourDivs = ({ data }) => {
             <p>{data.pairAddress}</p>
           </div>
         </div>
-        <div className={Styles.circle}><img src={info}/></div>
+        <div className={Styles.circle}><img src={info} alt="info"/></div>
       </div>
       <div className={Styles.smallContainer}>
         <h3>Base Token</h3>
@@ -46,7 +46,7 @@ const FourDivs = ({ data }) => {
             <p>{data.baseToken.address}</p>
           </div>
         </div>
-        <div className={Styles.circle}><img src={token}/></div>
+        <div className={Styles.circle}><img src={token} alt="token"/></div>
       </div>
       <div className={Styles.smallContainer}>
         <h3>Quote Token</h3>
@@ -64,7 +64,7 @@ const FourDivs = ({ data }) => {
             <p>{data.quoteToken.address}</p>
           </div>
         </div>
-        <div className={Styles.circle}><img src={token}/></div>
+        <div className={Styles.circle}><img src={token} alt="token"/></div>
       </div>
       <div className={Styles.smallContainer}>
         <h3>Price</h3>
@@ -78,7 +78,7 @@ const FourDivs = ({ data }) => {
             <p>{data.priceUsd}</p>
           </div>
         </div>
-        <div className={Styles.circle}><img src={doller}/></div>
+        <div className={Styles.circle}><img src={doller} alt='doller'/></div>
       </div>
     </div>
   );
