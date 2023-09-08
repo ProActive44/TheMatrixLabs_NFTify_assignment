@@ -6,7 +6,9 @@
   align-items: center;
   margin: 50px 0 50px 80px;
   /* background-color: aqua; */
+  max-width: 1400px;
   width: 100%;
+  /* margin: auto; */
 }
 
 .container img{

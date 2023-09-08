@@ -13,7 +13,9 @@ const TopBar = () => {
   };
 
   const handleSearch = ()=>{
-     dispatch(searchData(search))
+    if(search){
+      dispatch(searchData(search))
+    }
   }
 
   return (

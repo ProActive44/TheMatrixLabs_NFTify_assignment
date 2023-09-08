@@ -1,5 +1,7 @@
 .App {
   text-align: center;
   /* overflow: scroll; */
+  max-width: 1400px;
+  margin: auto;
 }
 

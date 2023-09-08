@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import FourDivs from './FourDivs';
+import Styles from '../Styles/SearchResult.module.css'
 
 const SearchResult = ({text}) => {
 
@@ -9,11 +10,11 @@ const SearchResult = ({text}) => {
     //   console.log(data)
 
     return (
-        <div style={{textAlign:'left', height: '80vh' , overflow: 'scroll'}}>
+        <div className={Styles.container}>
             <h2>{text}</h2>
             <div>
                 {
-                    data.map((ele, idx)=>{
+                    data?.map((ele, idx)=>{
                         return(
                             <div key={idx}>
                                <FourDivs data={ele}/>

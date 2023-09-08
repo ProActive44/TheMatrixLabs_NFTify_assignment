@@ -1,0 +1,13 @@
+.container {
+  text-align: left;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.container::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

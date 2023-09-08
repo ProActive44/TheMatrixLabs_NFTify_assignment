@@ -5,7 +5,7 @@ import doller from '../Images/dollar.png'
 import token from '../Images/baseline-token.png'
 
 const FourDivs = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   return (
     <div className={Styles.bigContainer}>
       <div className={Styles.smallContainer}>

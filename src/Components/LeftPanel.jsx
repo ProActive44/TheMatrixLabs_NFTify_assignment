@@ -13,7 +13,7 @@ const LeftPanel = () => {
     const dispatch = useDispatch();
     const active = useSelector((store)=>store.active)
 
-    console.log(active)
+    // console.log(active)
 
     const changeActive = ()=>{
         active ? dispatch({type:'TRUE'}) : dispatch({type:'FALSE'})
